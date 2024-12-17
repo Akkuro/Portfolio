@@ -1,0 +1,105 @@
+body {
+    text-align: justify;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.a4 {
+    /* aspect-ratio: 210 / 297; */
+    height:297mm;
+    width:210mm;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar {
+    width: 33%;
+    background-color: #F7CCB7;
+    padding: 0rem 1rem 1rem 1rem;
+    box-sizing: border-box;
+}
+
+.sidebar .section {
+    margin: 0 0 1.5rem;
+}
+
+.sidebar .section .section-header {
+    background-color: #F6C6AD;
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0 0 1rem 0;
+}
+
+.sidebar .section p {
+    margin: 0;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+}
+
+.circle {
+    width: 75%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #00aaff, #0066ff);
+    color: white;
+    font-weight: bold;
+    font-family: Consolas;
+    font-size: 1.8rem;
+    line-height: 1.3em;
+}
+
+.contact ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact ul li i {
+    display: flex;
+    margin-right: 10px;
+}
+
+
+.contact ul li i svg {
+    height: 1.25rem;
+}
+
+.contact ul li a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+
+.contact ul li a svg {
+    margin-left: 10px;
+    height: 0.8rem;
+    align-self: center;
+}
+
+.contact ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    width: 67%;
+    background-color: #fcfcfc;
+}
