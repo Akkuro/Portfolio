@@ -10,7 +10,6 @@ body {
 ul {
     margin: 0;
     padding: 0;
-    list-style-position: inside;
 }
 
 .a4 {
@@ -101,6 +100,10 @@ ul {
 
 .contact ul li a:hover {
     text-decoration: underline;
+}
+
+.training ul li {
+    margin-left: 1rem;
 }
 
 .sidebar .keywords .section-header {
