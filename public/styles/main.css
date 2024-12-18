@@ -152,6 +152,10 @@ ul {
     color: white;
 }
 
+.other ul li {
+    margin-left: 1rem;
+}
+
 .main-content {
     width: 67%;
     background-color: #fcfcfc;
