@@ -12,6 +12,10 @@ ul {
     padding: 0;
 }
 
+li {
+    text-align: left;
+}
+
 .a4 {
     /* aspect-ratio: 210 / 297; */
     height: 297mm;
@@ -29,7 +33,7 @@ ul {
 }
 
 .sidebar .section {
-    margin: 0 0 1.5rem;
+    margin: 0 0 1.5rem 0;
 }
 
 .sidebar .section .section-header {
@@ -37,7 +41,7 @@ ul {
     padding: 1rem;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.8rem 0;
 }
 
 .sidebar .section p {
@@ -74,12 +78,12 @@ ul {
 .contact ul li {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.3rem;
 }
 
 .contact ul li i {
     display: flex;
-    margin-right: 10px;
+    margin-right: 0.5rem;
 }
 
 .contact ul li i svg {
@@ -104,10 +108,6 @@ ul {
 
 .training ul li {
     margin-left: 1rem;
-}
-
-.sidebar .keywords .section-header {
-    margin-bottom: 0.7rem;
 }
 
 .keywords ul {
@@ -152,8 +152,13 @@ ul {
     color: white;
 }
 
+.training ul li {
+    margin-bottom: 0.3rem;
+}
+
 .other ul li {
     margin-left: 1rem;
+    margin-bottom: 0.3rem;
 }
 
 .main-content {
