@@ -1,8 +1,13 @@
-body {
-    text-align: justify;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    text-align: justify;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
 }
@@ -17,7 +22,6 @@ li {
 }
 
 .a4 {
-    /* aspect-ratio: 210 / 297; */
     height: 297mm;
     width: 210mm;
     padding: 0.4rem;
@@ -33,7 +37,7 @@ li {
 }
 
 .sidebar .section {
-    margin: 0 0 1.5rem 0;
+    margin-bottom: 1.4rem;
 }
 
 .sidebar .section .section-header {
@@ -41,11 +45,7 @@ li {
     padding: 1rem;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0 0 0.8rem 0;
-}
-
-.sidebar .section p {
-    margin: 0;
+    margin-bottom: 0.7rem;
 }
 
 .profile {
