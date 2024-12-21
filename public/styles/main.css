@@ -29,6 +29,10 @@ li {
     justify-content: center;
 }
 
+.section .section-header {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .sidebar {
     width: 33%;
     background-color: #F7CCB7;
@@ -44,8 +48,8 @@ li {
     background-color: #F6C6AD;
     padding: 1rem;
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-bottom: 0.7rem;
+    font-size: 1.2rem;
 }
 
 .profile {
@@ -164,4 +168,21 @@ li {
 .main-content {
     width: 67%;
     background-color: #fcfcfc;
+    padding: 1rem;
+}
+
+.main-content .section .section-header {
+    font-size: 1.6rem;
+}
+
+.main-content .section {
+    margin-bottom: 1.5rem;
+}
+
+.main-content .sub-section .sub-section-header {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    font-weight: lighter;
+    font-style: italic;
+    padding: 0.6rem 0 0.3rem 0;
 }
