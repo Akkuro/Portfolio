@@ -21,6 +21,10 @@ li {
     text-align: left;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .a4 {
     height: 297mm;
     width: 210mm;
@@ -185,4 +189,27 @@ li {
     font-weight: lighter;
     font-style: italic;
     padding: 0.6rem 0 0.3rem 0;
+}
+
+.date-section {
+    margin-bottom: 0.5rem;
+}
+
+.date-section li {
+    margin-bottom: 0.2rem;
+    text-align: justify;
+}
+
+.date-section h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.experiences ul li,
+.skills ul li {
+    margin-left: 0.9rem;
+}
+
+.italic {
+    font-style: italic;
 }
