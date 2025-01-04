@@ -25,6 +25,10 @@ li {
     font-weight: bold;
 }
 
+.italic {
+    font-style: italic;
+}
+
 .a4 {
     height: 297mm;
     width: 210mm;
@@ -201,6 +205,11 @@ li {
     margin-bottom: 0.25rem;
 }
 
-.italic {
-    font-style: italic;
+.exp-keywords {
+    font-weight: bold;
+    letter-spacing: -0.005rem;
+}
+
+.additional-info {
+    font-size: 0.9rem;
 }
