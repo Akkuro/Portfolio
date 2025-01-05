@@ -32,7 +32,6 @@ li {
 .a4 {
     height: 297mm;
     width: 210mm;
-    padding: 0.4rem;
     display: flex;
     justify-content: center;
 }
@@ -42,9 +41,10 @@ li {
 }
 
 .sidebar {
-    width: 33%;
+    width: 32%;
     background-color: #F7CCB7;
-    padding: 0rem 1rem 1rem 1rem;
+    padding: 0.7rem;
+    padding-top: 0rem;
     box-sizing: border-box;
 }
 
@@ -174,9 +174,10 @@ li {
 }
 
 .main-content {
-    width: 67%;
-    background-color: #fcfcfc;
+    width: 68%;
     padding: 1rem;
+    padding-left: 0.8rem;
+    background-color: #fcfcfc;
 }
 
 .main-content .section .section-header {
