@@ -173,6 +173,10 @@ li {
     margin-bottom: 0.3rem;
 }
 
+/***
+MAIN CONTENT
+*/
+
 .main-content {
     width: 68%;
     padding: 1rem;
@@ -193,17 +197,31 @@ li {
     letter-spacing: 0.1rem;
     font-weight: lighter;
     font-style: italic;
-    padding: 0.6rem 0 0.3rem 0;
-}
-
-.experiences ul li,
-.skills ul li {
-    margin: 0 0 0.5rem 0.9rem;
-    text-align: justify;
+    padding: 0.3rem 0;
 }
 
 .sub-section {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.company-experience {
+    margin-bottom: 0.5rem;
+}
+
+.company-title {
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
+}
+
+.company-work-date {
+    font-weight: normal;
+    font-style: italic;
+}
+
+.experience,
+.skill {
+    margin: 0 0 0.1rem 0.9rem;
+    text-align: justify;
 }
 
 .exp-keywords {
