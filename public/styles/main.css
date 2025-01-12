@@ -1,3 +1,7 @@
+/***
+GENERAL
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -40,6 +44,11 @@ li {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
+/***
+SIDE BAR
+*/
+
 .sidebar {
     width: 32%;
     background-color: #F7CCB7;
@@ -49,7 +58,7 @@ li {
 }
 
 .sidebar .section {
-    margin-bottom: 1.4rem;
+    margin-bottom: 1rem;
 }
 
 .sidebar .section .section-header {
@@ -172,6 +181,7 @@ li {
     margin-left: 1rem;
     margin-bottom: 0.3rem;
 }
+
 
 /***
 MAIN CONTENT
