@@ -242,3 +242,14 @@ MAIN CONTENT
 .additional-info {
     font-size: 0.9rem;
 }
+
+.grid-list {
+    --column-count: 4;
+    display: grid;
+    grid-template-columns: repeat(var(--column-count), auto);
+    gap: 0.5rem;
+}
+
+.grid-list li.wide {
+    grid-column: span var(--column-count);
+}
