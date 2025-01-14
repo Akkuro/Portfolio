@@ -261,6 +261,26 @@ MAIN CONTENT
     text-align: justify;
 }
 
+.experiences {
+    list-style-type: none;
+}
+
+.experience {
+    position: relative;
+    padding-left: 0.8rem;
+    margin-left: 0.3rem;
+}
+
+.experience::before {
+    content: '';
+    position: absolute;
+    top: 0.2rem;
+    bottom: 0.2rem;
+    left: 0;
+    width: 1px;
+    background-color: black;
+}
+
 .experience ol {
     margin-left: 0.9rem;
 }
