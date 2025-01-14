@@ -216,7 +216,7 @@ MAIN CONTENT
 }
 
 .company-experience {
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.5rem;
 }
 
 .company-experience:last-child {
@@ -224,19 +224,45 @@ MAIN CONTENT
 }
 
 .company-title {
+    --spacing: 0.7rem;
     font-size: 1rem;
     margin-bottom: 0.1rem;
 }
 
+.company-icon-title {
+    display: flex;
+    align-items: center;
+}
+
+.company-icon-title i {
+    margin: 0 0.4rem 0 -0.2rem;
+}
+
+.company-experience i svg {
+    height: 1.2rem;
+}
+
+.company-name {
+    font-size: 1.05rem;
+    margin-right: var(--spacing);
+}
+
 .company-work-date {
     font-weight: normal;
-    font-style: italic;
+}
+
+.company-work-date-range {
+    margin-right: var(--spacing);
 }
 
 .experience,
 .skill {
-    margin: 0 0 0.3rem 0.9rem;
+    margin: 0 0 0.4rem 0.9rem;
     text-align: justify;
+}
+
+.experience ol {
+    margin-left: 0.9rem;
 }
 
 .skill:last-child,
