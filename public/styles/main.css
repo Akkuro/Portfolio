@@ -29,10 +29,6 @@ li {
     font-weight: bold;
 }
 
-.italic {
-    font-style: italic;
-}
-
 .a4 {
     height: 297mm;
     width: 210mm;
@@ -232,6 +228,12 @@ MAIN CONTENT
     position: relative;
     padding-left: 0.8rem;
     margin-left: 0.3rem;
+    display: inline-block;
+}
+
+.experience:last-child,
+.skill:last-child {
+    margin-bottom: 0;
 }
 
 .experience::before {
@@ -244,6 +246,10 @@ MAIN CONTENT
     background-color: black;
 }
 
+.experience li {
+    text-align: justify;
+}
+
 .experience ul {
     margin-left: 0.7rem;
 }
@@ -252,15 +258,19 @@ MAIN CONTENT
     margin-bottom: 0.2rem;
 }
 
-.skill:last-child,
-.experience:last-child {
-    margin-bottom: 0;
+.additional-info {
+    display: inline;
+    text-align: right;
+    float: right;
 }
 
 .exp-keywords {
     font-weight: bold;
-    letter-spacing: -0.025rem;
-    margin: 0 0.5rem 0 1rem;
+}
+
+.exp-date {
+    font-style: italic;
+    margin-left: 1rem;
 }
 
 .grid-list {
