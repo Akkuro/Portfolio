@@ -145,40 +145,6 @@ SIDE BAR
     list-style: none;
 }
 
-.keywords ul li {
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    text-align: center;
-    width: fit-content;
-    font-family: Consolas, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-    font-size: 0.9rem;
-    background-color: #f0f0f0;
-    transition: transform 0.1s;
-}
-
-.keywords ul li:hover {
-    transform: translateY(-0.05rem);
-}
-
-.keywords ul li:nth-child(2) {
-    background-color: #ffc400;
-}
-
-.keywords ul li:nth-child(1) {
-    background-color: #e01b5d;
-    color: white;
-}
-
-.keywords ul li:nth-child(3) {
-    background-color: #9f2cfd;
-    color: white;
-}
-
-.keywords ul li:nth-child(4) {
-    background-color: #179fdf;
-    color: white;
-}
 
 /***
 MAIN CONTENT
