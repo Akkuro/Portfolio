@@ -2,26 +2,47 @@
 GENERAL
 */
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Variables */
+:root {
+    --rem: 16px;
+    --pt: 4/3;
+    --h1-font-size: calc(20px*var(--pt));
+    --h2-font-size: calc(16px*var(--pt));
+    --h3-font-size: calc(14px*var(--pt));
+    --h4-font-size: calc(12px*var(--pt));
+    --content-font-size: calc(10px*var(--pt));
+    --header-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --content-font: 'Cambria', 'Times New Roman', Times, serif;
+}
+
+html {
+    font-size: var(--rem);
+}
+
 body {
+    /* Reset */
     min-height: 100vh;
+    font-size: var(--content-font-size);
     text-align: justify;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: var(--content-font);
     display: flex;
     justify-content: center;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-li {
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-align: left;
 }
 
@@ -37,13 +58,17 @@ li {
 }
 
 .section .section-header {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: var(--header-font);
 }
 
 
 /***
 SIDE BAR
 */
+
+#h1 {
+    font-size: var(--h1-font-size);
+}
 
 .sidebar {
     width: 32%;
@@ -62,7 +87,7 @@ SIDE BAR
     padding: 0.5rem;
     text-align: center;
     margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    font-size: var(--h3-font-size);
 }
 
 .profile {
@@ -104,7 +129,7 @@ SIDE BAR
 }
 
 .contact ul li i svg {
-    height: 1.25rem;
+    height: calc(1.25*var(--content-font-size));
 }
 
 .contact ul li a {
@@ -115,7 +140,7 @@ SIDE BAR
 
 .contact ul li a svg {
     margin-left: 10px;
-    height: 0.8rem;
+    height: calc(0.8*var(--content-font-size));
     align-self: center;
 }
 
@@ -153,7 +178,7 @@ MAIN CONTENT
 }
 
 .main-content .section .section-header {
-    font-size: 1.6rem;
+    font-size: var(--h2-font-size);
     margin-bottom: 0.3rem;
 }
 
@@ -162,7 +187,7 @@ MAIN CONTENT
 }
 
 .main-content .sub-section .sub-section-header {
-    font-size: 1.2rem;
+    font-size: var(--h3-font-size);
     letter-spacing: 0.1rem;
     font-weight: lighter;
     font-style: italic;
@@ -182,7 +207,7 @@ MAIN CONTENT
 }
 
 .company-title {
-    font-size: 1.2rem;
+    font-size: var(--h4-font-size);
     margin-bottom: 0.2rem;
 }
 
@@ -242,10 +267,11 @@ MAIN CONTENT
 }
 
 .exp-keywords::before {
-content: '[';
+    content: '[';
 }
+
 .exp-keywords::after {
-content: ']';
+    content: ']';
 }
 
 .exp-date {
