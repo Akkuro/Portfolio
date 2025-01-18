@@ -182,35 +182,13 @@ MAIN CONTENT
 }
 
 .company-title {
-    --spacing: 0.7rem;
-    font-size: 1rem;
-    margin-bottom: 0.1rem;
-}
-
-.company-icon-title {
-    display: flex;
-    align-items: center;
-}
-
-.company-icon-title i {
-    margin: 0 0.4rem 0 -0.2rem;
-}
-
-.company-experience i svg {
-    height: 1.2rem;
-}
-
-.company-name {
-    font-size: 1.05rem;
-    margin-right: var(--spacing);
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
 }
 
 .company-work-date {
-    font-weight: normal;
-}
-
-.company-work-date-range {
-    margin-right: var(--spacing);
+    float: right;
+    font-style: normal;
 }
 
 .experience,
@@ -263,8 +241,11 @@ MAIN CONTENT
     float: right;
 }
 
-.exp-keywords {
-    font-weight: bold;
+.exp-keywords::before {
+content: '[';
+}
+.exp-keywords::after {
+content: ']';
 }
 
 .exp-date {
