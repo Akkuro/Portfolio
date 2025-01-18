@@ -281,8 +281,12 @@ MAIN CONTENT
     background-color: black;
 }
 
-.experience ol {
-    margin-left: 0.9rem;
+.experience ul {
+    margin-left: 0.7rem;
+}
+
+.experience ul li {
+    margin-bottom: 0.2rem;
 }
 
 .skill:last-child,
