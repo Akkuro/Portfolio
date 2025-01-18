@@ -127,8 +127,15 @@ SIDE BAR
     text-decoration: underline;
 }
 
-.training ul li {
-    margin-left: 1rem;
+.training ul li,
+.certifications ul li,
+.other ul li {
+    margin: 0 0 0.3rem 1rem;
+}
+
+.certification-date {
+    font-style: italic;
+    float: right;
 }
 
 .keywords ul {
@@ -172,16 +179,6 @@ SIDE BAR
     background-color: #179fdf;
     color: white;
 }
-
-.training ul li {
-    margin-bottom: 0.3rem;
-}
-
-.other ul li {
-    margin-left: 1rem;
-    margin-bottom: 0.3rem;
-}
-
 
 /***
 MAIN CONTENT
