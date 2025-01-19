@@ -284,6 +284,10 @@ MAIN CONTENT
     margin-bottom: 0;
 }
 
-.grid-list li.wide {
+.grid-list li.language {
     grid-column: span var(--column-count);
+}
+
+.language .flag {
+    padding-left: calc(0.5*var(--content-font-size));
 }
