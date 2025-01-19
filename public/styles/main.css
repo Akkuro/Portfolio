@@ -134,6 +134,9 @@ SIDE BAR
 .sidebar,
 .main-content {
     padding: var(--content-font-size);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .sidebar {
@@ -198,40 +201,40 @@ SIDE BAR
     list-style-type: none;
 }
 
-.contact ul li {
+.contact li {
     display: flex;
     align-items: center;
     margin-bottom: 0.3rem;
 }
 
-.contact ul li i {
+.contact li i {
     display: flex;
     margin-right: 0.5rem;
 }
 
-.contact ul li i svg {
+.contact li i svg {
     height: calc(1.25*var(--content-font-size));
 }
 
-.contact ul li a {
+.contact li a {
     display: flex;
     text-decoration: none;
     color: black;
 }
 
-.contact ul li a svg {
+.contact li a svg {
     margin-left: 10px;
     height: calc(0.8*var(--content-font-size));
     align-self: center;
 }
 
-.contact ul li a:hover {
+.contact li a:hover {
     text-decoration: underline;
 }
 
-.training ul li,
-.certifications ul li,
-.other ul li {
+.training li,
+.certifications li,
+.other li {
     margin: 0 0 0.3rem 1rem;
 }
 
@@ -256,16 +259,12 @@ MAIN CONTENT
     background-color: #fcfcfc;
 }
 
-.main-content .section .section-header {
+.main-content .section-header {
     font-size: var(--h2-font-size);
     margin-bottom: 0.3rem;
 }
 
-.main-content .section {
-    margin-bottom: 1.5rem;
-}
-
-.main-content .sub-section .sub-section-header {
+.main-content .sub-section-header {
     font-size: var(--h3-font-size);
     letter-spacing: 0.1rem;
     font-weight: lighter;
@@ -275,6 +274,10 @@ MAIN CONTENT
 
 .sub-section {
     margin-bottom: 1.5rem;
+}
+
+.sub-section:last-child {
+    margin-bottom: 0;
 }
 
 .company-experience {
@@ -353,6 +356,10 @@ MAIN CONTENT
     margin-left: 0.5rem;
 }
 
+.sub-section.technical-skills {
+    margin-bottom: 1.2rem;
+}
+
 .prog-languages {
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -382,15 +389,10 @@ MAIN CONTENT
     margin-bottom: 0;
 }
 
-.grid-list li.language {
+.grid-list .language {
     grid-column: span var(--column-count);
 }
 
 .language .flag {
     padding-left: calc(0.5*var(--content-font-size));
-}
-
-.transversal-skills {
-    /* Make it fit to the proper padding */
-    margin-top: -0.3rem;
 }
