@@ -113,6 +113,12 @@ SIDE BAR
     line-height: 1.3em;
 }
 
+.sidebar-sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .contact ul {
     list-style-type: none;
 }
