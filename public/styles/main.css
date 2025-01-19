@@ -231,6 +231,7 @@ MAIN CONTENT
     padding-left: 0.5rem;
     margin: 0 0 1rem 0.3rem;
     display: inline-block;
+    width: 100%;
 }
 
 .experience:last-child,
