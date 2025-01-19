@@ -179,11 +179,8 @@ SIDE BAR
     float: right;
 }
 
-.keywords ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.15rem 0.05rem;
-    list-style: none;
+.other li {
+    text-align: justify;
 }
 
 .other li:last-child {
