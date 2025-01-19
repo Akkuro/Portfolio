@@ -104,10 +104,18 @@ h6 {
 }
 
 .a4 {
-    height: 297mm;
-    width: 210mm;
+    max-width: 210mm;
+    max-height: 297mm;
+    aspect-ratio: 210/297;
     display: flex;
     justify-content: center;
+    border: thin solid black;
+}
+
+.a4vw {
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
 }
 
 .section .section-header {
