@@ -203,16 +203,11 @@ SIDE BAR
 
 .contact li {
     display: flex;
-    align-items: center;
     margin-bottom: 0.3rem;
 }
 
-.contact li i {
-    display: flex;
+.contact li svg {
     margin-right: 0.5rem;
-}
-
-.contact li i svg {
     height: calc(1.25*var(--content-font-size));
 }
 
