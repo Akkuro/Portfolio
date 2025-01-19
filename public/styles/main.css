@@ -113,10 +113,20 @@ SIDE BAR
     line-height: 1.3em;
 }
 
+.sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
 .sidebar-sections {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-grow: 1;
+}
+
+.sidebar-sections>.section:last-child {
+    margin-bottom: 0;
 }
 
 .contact ul {
@@ -171,6 +181,9 @@ SIDE BAR
     list-style: none;
 }
 
+.other li:last-child {
+    margin-bottom: 0;
+}
 
 /***
 MAIN CONTENT
