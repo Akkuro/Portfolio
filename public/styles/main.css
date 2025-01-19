@@ -20,6 +20,7 @@ GENERAL
     --content-font-size: calc(10px*var(--pt));
     --header-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     --content-font: 'Cambria', 'Times New Roman', Times, serif;
+    --sidebar-width-percent: 32%;
 }
 
 html {
@@ -70,10 +71,14 @@ SIDE BAR
     font-size: var(--h1-font-size);
 }
 
+.sidebar,
+.main-content {
+    padding: var(--content-font-size);
+}
+
 .sidebar {
-    width: 32%;
+    width: var(--sidebar-width-percent);
     background-color: #F7CCB7;
-    padding: 0.7rem;
     padding-top: 0rem;
     box-sizing: border-box;
 }
@@ -190,9 +195,7 @@ MAIN CONTENT
 */
 
 .main-content {
-    width: 68%;
-    padding: var(--content-font-size);
-    padding-left: 0.8rem;
+    width: calc(100% - var(--sidebar-width-percent));
     background-color: #fcfcfc;
 }
 
