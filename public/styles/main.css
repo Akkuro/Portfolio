@@ -172,7 +172,7 @@ MAIN CONTENT
 
 .main-content {
     width: 68%;
-    padding: 1rem;
+    padding: var(--content-font-size);
     padding-left: 0.8rem;
     background-color: #fcfcfc;
 }
@@ -271,6 +271,18 @@ MAIN CONTENT
 
 .exp-date {
     margin-left: 0.5rem;
+}
+
+.prog-languages {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    margin-left: var(--content-font-size);
+}
+
+.dev-tools {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    margin-left: var(--content-font-size);
 }
 
 .grid-list {
