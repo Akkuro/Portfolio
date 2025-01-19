@@ -183,7 +183,7 @@ MAIN CONTENT
 }
 
 .main-content .section {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .main-content .sub-section .sub-section-header {
@@ -195,11 +195,11 @@ MAIN CONTENT
 }
 
 .sub-section {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .company-experience {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .company-experience:last-child {
@@ -208,7 +208,7 @@ MAIN CONTENT
 
 .company-title {
     font-size: var(--h4-font-size);
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .company-work-date {
@@ -228,8 +228,8 @@ MAIN CONTENT
 
 .experience {
     position: relative;
-    padding-left: 0.8rem;
-    margin-left: 0.3rem;
+    padding-left: 0.5rem;
+    margin: 0 0 1rem 0.3rem;
     display: inline-block;
 }
 
@@ -252,18 +252,13 @@ MAIN CONTENT
     text-align: justify;
 }
 
-.experience ul {
-    list-style: none;
-}
-
-.experience ul li {
-    margin-bottom: 0.2rem;
-}
-
 .additional-info {
-    display: inline;
-    text-align: right;
+    margin-left: 1rem;
     float: right;
+}
+
+.exp-keywords {
+    font-weight: bold;
 }
 
 .exp-keywords::before {
@@ -275,7 +270,7 @@ MAIN CONTENT
 }
 
 .exp-date {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 }
 
 .grid-list {
