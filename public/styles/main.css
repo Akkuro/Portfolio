@@ -128,7 +128,8 @@ SIDE BAR
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(135deg, #00aaff, #0066ff);
+    background: rgb(67, 86, 255);
+    background: linear-gradient(135deg, rgb(45, 178, 255) 0%, rgba(67, 86, 255, 1) 80%);
     color: white;
     font-weight: bold;
     font-family: var(--h1-font);
