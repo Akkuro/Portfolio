@@ -146,11 +146,7 @@ SIDE BAR
     box-sizing: border-box;
 }
 
-.sidebar .section {
-    margin-bottom: 1rem;
-}
-
-.sidebar .section .section-header {
+.sidebar .section-header {
     background-color: #F6C6AD;
     padding: 0.5rem;
     text-align: center;
