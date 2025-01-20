@@ -29,6 +29,7 @@ body {
     --h1-font: 'Source Code Pro', Consolas, serif;
     --header-font: 'PT Sans', 'Trebuchet MS', sans-serif;
     --content-font: Newsreader, Cambria, serif;
+    --spaced-line-height: 1.2em;
 }
 
 body {
@@ -89,7 +90,7 @@ SIDE BAR
 
 .sidebar,
 .main-content {
-    padding: var(--content-font-size);
+    padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -131,11 +132,11 @@ SIDE BAR
     font-weight: bold;
     font-family: var(--h1-font);
     font-size: 1.8rem;
-    line-height: 1.3em;
+    line-height: 1.5em;
 }
 
 .about {
-    line-height: 1.25em;
+    line-height: var(--spaced-line-height);
 }
 
 .sidebar {
@@ -181,18 +182,33 @@ SIDE BAR
 
 .bullets>li::before {
     content: '•';
+    margin-right: 0.35rem;
+}
+
+.sub-bullets>li::before {
+    content: '◦';
+    margin-right: 0.1rem;
+}
+
+.bullets>li::before,
+.sub-bullets>li::before {
     display: inline-block;
-    margin-right: 0.4rem;
-    font-size: 1.1rem;
+    font-size: 1em;
     position: relative;
 }
 
-.bullets>li {
+.bullets>li,
+.sub-bullets>li {
     display: flex;
 }
 
+.bullets.non-linear>li,
+.sub-bullets.non-linear>li {
+    display: block;
+}
+
 .sidebar li {
-    line-height: 1.2em;
+    line-height: var(--spaced-line-height);
 }
 
 .sidebar li+li {
@@ -264,26 +280,25 @@ MAIN CONTENT
 
 .experience,
 .skill {
-    margin: 0 0 0.4rem 0.9rem;
     text-align: justify;
 }
 
-.experience {
-    position: relative;
-    padding-left: 0.5rem;
-    margin: 0 0 1rem 0.3rem;
-    display: inline-block;
+.experience+.experience {
+    margin-top: 1em;
 }
 
-.experience:last-child,
-.skill:last-child {
-    margin-bottom: 0;
+.experience {
+    display: inline-block;
+    position: relative;
+    padding-left: 0.5rem;
+    width: 100%;
+    line-height: 1.2;
 }
 
 .experience::before {
     content: '';
     position: absolute;
-    top: 0.2rem;
+    top: 0;
     bottom: 0;
     left: 0;
     width: 1px;
@@ -315,33 +330,38 @@ MAIN CONTENT
     margin-left: 0.5rem;
 }
 
-.prog-languages {
+.skill+.skill {
+    margin-top: 0.7em;
+}
+
+.keywords-grid {
     display: grid;
+    margin-left: 1em;
+    margin-top: 0.3em;
+    gap: 0.3em;
+}
+
+.prog-languages {
     grid-template-columns: repeat(4, auto);
-    margin-left: var(--content-font-size);
 }
 
 .dev-tools {
-    display: grid;
     grid-template-columns: repeat(3, auto);
-    margin-left: var(--content-font-size);
 }
 
 .design-principles {
-    display: grid;
     grid-template-columns: repeat(3, auto);
-    margin-left: var(--content-font-size);
 }
 
 .grid-list {
     --column-count: 4;
     display: grid;
     grid-template-columns: repeat(var(--column-count), auto);
-    gap: 0.3rem;
+    gap: 0.5rem;
 }
 
-.grid-list li {
-    margin-bottom: 0;
+.grid-list .skill+.skill {
+    margin-top: 0;
 }
 
 .grid-list .language {
@@ -349,5 +369,5 @@ MAIN CONTENT
 }
 
 .language .flag {
-    padding-left: calc(0.5*var(--content-font-size));
+    padding-left: 0.5em;
 }
