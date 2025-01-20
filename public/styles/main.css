@@ -72,8 +72,9 @@ h6 {
     --h3-font-size: calc(14px*var(--pt));
     --h4-font-size: calc(12px*var(--pt));
     --content-font-size: calc(10px*var(--pt));
-    --header-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    --content-font: 'Cambria', 'Times New Roman', Times, serif;
+    --h1-font: /*'Source Code Pro',*/ Consolas, serif;
+    --header-font: /*'PT Sans',*/ 'Trebuchet MS', sans-serif;
+    --content-font: /*'Newsreader',*/ 'Cambria', serif;
     --sidebar-width-percent: 32%;
 }
 
@@ -118,7 +119,7 @@ h6 {
     display: flex;
 }
 
-.section .section-header {
+.section-header {
     font-family: var(--header-font);
 }
 
@@ -172,7 +173,7 @@ SIDE BAR
     background: linear-gradient(135deg, #00aaff, #0066ff);
     color: white;
     font-weight: bold;
-    font-family: Consolas, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: var(--h1-font);
     font-size: 1.8rem;
     line-height: 1.3em;
 }
@@ -257,10 +258,9 @@ MAIN CONTENT
 
 .main-content .sub-section-header {
     font-size: var(--h3-font-size);
-    letter-spacing: 0.1rem;
-    font-weight: lighter;
+    font-weight: normal;
     font-style: italic;
-    padding-bottom: 0.3rem;
+    margin-bottom: 0.3rem;
 }
 
 .sub-section {
@@ -345,10 +345,6 @@ MAIN CONTENT
 
 .exp-date {
     margin-left: 0.5rem;
-}
-
-.sub-section.technical-skills {
-    margin-bottom: 1.2rem;
 }
 
 .prog-languages {
