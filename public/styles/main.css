@@ -138,10 +138,11 @@ SIDE BAR
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
 }
 
 .sidebar {
-    width: var(--sidebar-width-percent);
+    width: 32%;
     background-color: #F7CCB7;
     padding-top: 0rem;
     box-sizing: border-box;
@@ -247,7 +248,7 @@ MAIN CONTENT
 */
 
 .main-content {
-    width: calc(100% - var(--sidebar-width-percent));
+    flex: 1;
     background-color: #fcfcfc;
 }
 
