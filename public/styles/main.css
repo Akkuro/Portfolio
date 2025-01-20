@@ -2,7 +2,7 @@
 GENERAL
 */
 
-/* Reset */
+/* Proper page sizing */
 *,
 *::before,
 *::after {
@@ -16,77 +16,28 @@ GENERAL
 
 body {
     min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-    display: block;
-    max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    overflow-wrap: break-word;
-}
-
-p {
-    text-wrap: pretty;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    text-wrap: balance;
-}
-
-#root,
-#__next {
-    isolation: isolate;
 }
 
 /* Variables */
 :root {
-    --rem: 16px;
     --pt: 4/3;
-    --h1-font-size: calc(20px*var(--pt));
-    --h2-font-size: calc(16px*var(--pt));
-    --h3-font-size: calc(14px*var(--pt));
-    --h4-font-size: calc(12px*var(--pt));
-    --content-font-size: calc(10px*var(--pt));
-    --h1-font: /*'Source Code Pro',*/ Consolas, serif;
-    --header-font: /*'PT Sans',*/ 'Trebuchet MS', sans-serif;
-    --content-font: /*'Newsreader',*/ 'Cambria', serif;
-}
-
-html {
-    font-size: var(--rem);
+    --h1-font-size: calc(20px * var(--pt));
+    --h2-font-size: calc(16px * var(--pt));
+    --h3-font-size: calc(14px * var(--pt));
+    --h4-font-size: calc(12px * var(--pt));
+    --content-font-size: calc(10px * var(--pt));
+    --h1-font: 'Source Code Pro', Consolas, serif;
+    --header-font: 'PT Sans', 'Trebuchet MS', sans-serif;
+    --content-font: Newsreader, Cambria, serif;
 }
 
 body {
-    font-size: var(--content-font-size);
-    text-align: justify;
-    font-family: var(--content-font);
     display: flex;
     justify-content: center;
+}
+
+body {
+    text-align: justify;
 }
 
 li,
@@ -104,12 +55,10 @@ h6 {
 }
 
 .a4 {
+    display: flex;
     max-width: 210mm;
     max-height: 297mm;
     aspect-ratio: 210/297;
-    display: flex;
-    justify-content: center;
-    border: thin solid black;
 }
 
 .a4vw {
@@ -118,8 +67,15 @@ h6 {
     display: flex;
 }
 
+.a4 {
+    border: thin solid black;
+    font-family: var(--content-font);
+    font-size: var(--content-font-size);
+}
+
 .section-header {
     font-family: var(--header-font);
+    font-weight: bold;
 }
 
 
@@ -178,6 +134,10 @@ SIDE BAR
     line-height: 1.3em;
 }
 
+.about {
+    line-height: 1.25em;
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -194,40 +154,49 @@ SIDE BAR
     margin-bottom: 0;
 }
 
-.contact ul {
-    list-style-type: none;
-}
-
 .contact li {
     display: flex;
-    margin-bottom: 0.3rem;
 }
 
-.contact li svg {
+.contact-icon {
     margin-right: 0.5rem;
-    height: calc(1.25*var(--content-font-size));
+    height: 1.25em;
 }
 
 .contact li a {
     display: flex;
+    gap: 0.5em;
     text-decoration: none;
     color: black;
-}
-
-.contact li a svg {
-    margin-left: 10px;
-    height: calc(0.8*var(--content-font-size));
-    align-self: center;
 }
 
 .contact li a:hover {
     text-decoration: underline;
 }
 
-.training li,
-.certifications li,
-.other li {
-    margin: 0 0 0.3rem 1rem;
+.contact li a .link-opener {
+    height: 0.8em;
+    align-self: center;
+}
+
+.bullets>li::before {
+    content: '•';
+    display: inline-block;
+    margin-right: 0.4rem;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.bullets>li {
+    display: flex;
+}
+
+.sidebar li {
+    line-height: 1.2em;
+}
+
+.sidebar li+li {
+    margin-top: 0.4em;
 }
 
 .certification-date {
@@ -238,9 +207,12 @@ SIDE BAR
     text-align: justify;
 }
 
-.other li:last-child {
-    margin-bottom: 0;
+.certifications .wrapper {
+    display: inline-block;
+    position: relative;
+    width: 100%;
 }
+
 
 /***
 MAIN CONTENT
@@ -281,6 +253,7 @@ MAIN CONTENT
 
 .company-title {
     font-size: var(--h4-font-size);
+    font-weight: bold;
     margin-bottom: 0.5rem;
 }
 
@@ -293,10 +266,6 @@ MAIN CONTENT
 .skill {
     margin: 0 0 0.4rem 0.9rem;
     text-align: justify;
-}
-
-.experiences {
-    list-style-type: none;
 }
 
 .experience {
