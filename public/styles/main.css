@@ -100,13 +100,13 @@ SIDE BAR
 
 .sidebar {
     width: 32%;
-    background-color: #F7CCB7;
+    background-color: hsl(20, 80%, 84%);
     padding-top: 0rem;
     box-sizing: border-box;
 }
 
 .sidebar .section-header {
-    background-color: #F6C6AD;
+    background-color: hsl(20, 80%, 80%);
     padding: 0.5rem;
     text-align: center;
     margin-bottom: 0.5rem;
