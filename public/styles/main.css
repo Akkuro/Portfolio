@@ -189,7 +189,7 @@ SIDE BAR
 
 .sub-bullets>li::before {
     content: '◦';
-    margin-right: 0.1rem;
+    margin-right: 0.35rem;
 }
 
 .bullets>li::before,
