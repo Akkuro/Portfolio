@@ -124,10 +124,18 @@ SIDE BAR
     aspect-ratio: 1;
 }
 
-.resume-object {
-    margin-bottom: 1em;
+.mission-dates {
     line-height: var(--spaced-line-height);
+    display: flex;
+    gap: 0.5em;
     text-align: left;
+}
+
+.mission-dates>.icon {
+    width: 3em;
+    aspect-ratio: 1;
+    vertical-align: middle;
+    margin-top: -0.6em;
 }
 
 .circle {
