@@ -127,6 +127,7 @@ SIDE BAR
 .resume-object {
     margin-bottom: 1em;
     line-height: var(--spaced-line-height);
+    text-align: left;
 }
 
 .circle {
