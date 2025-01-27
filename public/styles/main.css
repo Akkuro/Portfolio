@@ -55,6 +55,10 @@ h6 {
     font-weight: bold;
 }
 
+.underlined {
+    text-decoration: underline;
+}
+
 .a4 {
     display: flex;
     max-width: 210mm;
@@ -118,6 +122,11 @@ SIDE BAR
     justify-content: center;
     align-items: center;
     aspect-ratio: 1;
+}
+
+.resume-object {
+    margin-bottom: 1em;
+    line-height: var(--spaced-line-height);
 }
 
 .circle {
