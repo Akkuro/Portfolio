@@ -66,12 +66,6 @@ h6 {
     aspect-ratio: 210/297;
 }
 
-.a4vw {
-    width: 100vw;
-    max-width: 100%;
-    display: flex;
-}
-
 .a4 {
     border: thin solid black;
     font-family: var(--content-font);
@@ -256,6 +250,7 @@ MAIN CONTENT
 
 .main-content {
     flex: 1;
+    gap: 1.5rem;
     background-color: #fcfcfc;
 }
 
@@ -414,5 +409,13 @@ MAIN CONTENT
             clamp(calc(4px * var(--pt)),
                 calc(10 * var(--pt) / 795 * 100vw),
                 calc(10px * var(--pt)));
+    }
+
+    .sidebar, .main-content {
+        overflow: auto;
+    }
+
+    .a4 {
+        max-height: unset;
     }
 }
