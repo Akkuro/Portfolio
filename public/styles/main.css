@@ -411,11 +411,16 @@ MAIN CONTENT
                 calc(10px * var(--pt)));
     }
 
-    .sidebar, .main-content {
-        overflow: auto;
+    body {
+        min-height: unset;
     }
 
     .a4 {
         max-height: unset;
+        aspect-ratio: unset;
+    }
+
+    .sidebar {
+        width: 30%;
     }
 }
