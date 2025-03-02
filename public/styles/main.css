@@ -395,3 +395,24 @@ MAIN CONTENT
 .language .flag {
     padding-left: 0.5em;
 }
+
+@media (max-width: 795px) {
+    :root {
+        --h1-font-size: clamp(calc(8px * var(--pt)),
+                calc(20 * var(--pt) / 795 * 100vw),
+                calc(20px * var(--pt)));
+        --h2-font-size: clamp(calc(6.4px * var(--pt)),
+                calc(16 * var(--pt) / 795 * 100vw),
+                calc(16px * var(--pt)));
+        --h3-font-size: clamp(calc(5.6px * var(--pt)),
+                calc(14 * var(--pt) / 795 * 100vw),
+                calc(14px * var(--pt)));
+        --h4-font-size: clamp(calc(4.8px * var(--pt)),
+                calc(12 * var(--pt) / 795 * 100vw),
+                calc(12px * var(--pt)));
+        --content-font-size:
+            clamp(calc(4px * var(--pt)),
+                calc(10 * var(--pt) / 795 * 100vw),
+                calc(10px * var(--pt)));
+    }
+}
