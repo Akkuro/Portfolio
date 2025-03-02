@@ -99,15 +99,15 @@ SIDE BAR
 .sidebar {
     width: 32%;
     background-color: hsl(20, 80%, 84%);
-    padding-top: 0rem;
+    padding-top: calc(0 * var(--content-font-size));
     box-sizing: border-box;
 }
 
 .sidebar .section-header {
     background-color: hsl(20, 80%, 80%);
-    padding: 0.5rem;
+    padding: calc(0.5 * var(--content-font-size));
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: calc(0.5 * var(--content-font-size));
     font-size: var(--h3-font-size);
 }
 
@@ -145,7 +145,7 @@ SIDE BAR
     color: white;
     font-weight: bold;
     font-family: var(--h1-font);
-    font-size: 1.8rem;
+    font-size: calc(1.8 * var(--content-font-size));
     line-height: 1.5em;
 }
 
@@ -174,7 +174,7 @@ SIDE BAR
 }
 
 .contact-icon {
-    margin-right: 0.5rem;
+    margin-right: calc(0.5 * var(--content-font-size));
     height: 1.25em;
 }
 
@@ -196,12 +196,12 @@ SIDE BAR
 
 .bullets>li::before {
     content: '•';
-    margin-right: 0.35rem;
+    margin-right: calc(0.35 * var(--content-font-size));
 }
 
 .sub-bullets>li::before {
     content: '◦';
-    margin-right: 0.35rem;
+    margin-right: calc(0.35 * var(--content-font-size));
 }
 
 .bullets>li::before,
@@ -250,24 +250,24 @@ MAIN CONTENT
 
 .main-content {
     flex: 1;
-    gap: 1.5rem;
+    gap: calc(1.5 * var(--content-font-size));
     background-color: #fcfcfc;
 }
 
 .main-content .section-header {
     font-size: var(--h2-font-size);
-    margin-bottom: 0.4rem;
+    margin-bottom: calc(0.4 * var(--content-font-size));
 }
 
 .main-content .sub-section-header {
     font-size: var(--h3-font-size);
     font-weight: normal;
     font-style: italic;
-    margin-bottom: 0.4rem;
+    margin-bottom: calc(0.4 * var(--content-font-size));
 }
 
 .sub-section {
-    margin-bottom: 1.5rem;
+    margin-bottom: calc(1.5 * var(--content-font-size));
 }
 
 .sub-section:last-child {
@@ -275,7 +275,7 @@ MAIN CONTENT
 }
 
 .company-experience {
-    margin-bottom: 1rem;
+    margin-bottom: calc(1 * var(--content-font-size));
 }
 
 .company-experience:last-child {
@@ -285,7 +285,7 @@ MAIN CONTENT
 .company-title {
     font-size: var(--h4-font-size);
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin-bottom: calc(0.5 * var(--content-font-size));
 }
 
 .company-work-date {
@@ -305,7 +305,7 @@ MAIN CONTENT
 .experience {
     display: inline-block;
     position: relative;
-    padding-left: 0.5rem;
+    padding-left: calc(0.5 * var(--content-font-size));
     width: 100%;
     line-height: 1.2;
 }
@@ -325,7 +325,7 @@ MAIN CONTENT
 }
 
 .additional-info {
-    margin-left: 1rem;
+    margin-left: calc(1 * var(--content-font-size));
     float: right;
 }
 
@@ -342,11 +342,11 @@ MAIN CONTENT
 }
 
 .exp-date {
-    margin-left: 0.5rem;
+    margin-left: calc(0.5 * var(--content-font-size));
 }
 
 .skills .bullets {
-    margin-left: 0.1rem;
+    margin-left: calc(0.1 * var(--content-font-size));
 }
 
 .skill+.skill {
