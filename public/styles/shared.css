@@ -1,0 +1,67 @@
+:root {
+    --pt: 4/3;
+    --h1-font-size: calc(20px * var(--pt));
+    --h2-font-size: calc(16px * var(--pt));
+    --h3-font-size: calc(14px * var(--pt));
+    --h4-font-size: calc(12px * var(--pt));
+    --content-font-size: calc(10px * var(--pt));
+    --h1-font: 'Source Code Pro', Consolas, serif;
+    --header-font: 'PT Sans', 'Trebuchet MS', sans-serif;
+    --content-font: Newsreader, Cambria, serif;
+    --spaced-line-height: 1.2em;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    text-align: justify;
+}
+
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: left;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+.a4 {
+    align-self: center;
+    max-width: 210mm;
+    max-height: 297mm;
+    aspect-ratio: 210/297;
+}
+
+.a4 {
+    border: thin solid black;
+    font-family: var(--content-font);
+    font-size: var(--content-font-size);
+}
