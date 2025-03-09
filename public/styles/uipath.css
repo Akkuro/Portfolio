@@ -1,0 +1,43 @@
+:root {
+    --content-font-size: calc(12px * var(--pt));
+}
+
+body {
+    font-size: var(--content-font-size);
+}
+
+#h1 {
+    font-size: var(--h1-font-size);
+    font-family: var(--header-font);
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+
+.a4 {
+    padding: 4em 4.5em;
+}
+
+.date {
+    margin-bottom: 1em;
+    font-style: italic;
+}
+
+.coordinates {
+    margin-bottom: 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tel, .email, .linkedin {
+    color: #008080;
+}
+
+.company-coordinates {
+    text-align: right;
+}
+
+.coordinates, .main-paragraph {
+    font-family: var(--content-font);
+    font-size: var(--content-font-size);
+    line-height: 1.5em;
+}
