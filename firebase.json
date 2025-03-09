@@ -8,11 +8,10 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "redirects": [
+    "rewrites": [
       {
         "source": "**",
-        "destination": "/",
-        "type": 301
+        "destination": "/index.html"
       }
     ]
   }
