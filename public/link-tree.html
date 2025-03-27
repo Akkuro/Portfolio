@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Links</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #4f46e5;
+            --background-color: #f8fafc;
+            --text-color: #1e293b;
+            --card-bg: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+            position: relative;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 4px solid var(--card-bg);
+            box-shadow: var(--shadow);
+        }
+
+        .profile h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile p {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .language-switcher {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            margin-left: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .category-title {
+            margin: 1.5rem 0 1rem;
+            color: var(--text-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .link-btn {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border: none;
+            padding: 1rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .link-btn i {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .link-btn.active i {
+            transform: rotate(180deg);
+        }
+
+        .qr-container {
+            display: none;
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            margin-top: 0.5rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .qr-container.active {
+            display: block;
+        }
+
+        .qr-code-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 1rem;
+            width: 100%;
+        }
+
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .qr-code img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .qr-title {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details-item {
+            background-color: rgba(99, 102, 241, 0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-details-item .qr-code {
+            width: 80px;
+            height: 80px;
+            padding: 0.5rem;
+        }
+
+        .contact-details-text {
+            flex-grow: 1;
+        }
+
+        .text-value {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="fr">FR</button>
+        </div>
+
+        <div class="profile">
+            <img src="./resources/profile.jpg" alt="Profile" class="profile-img">
+            <h1 data-i18n="title">My QR Codes</h1>
+            <p data-i18n="subtitle">Scan to connect</p>
+        </div>
+
+        <div class="links">
+            <!-- Contact (vCard) -->
+            <h3 class="category-title" data-i18n="contact">Contact</h3>
+            <button class="link-btn" data-qr="contact">
+                <span data-i18n="add_contact">Add to Contacts</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="qr-container" id="contact">
+                <h3 class="qr-title" data-i18n="contact_qr">Contact QR Code</h3>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="./resources/qr-codes/contact-en-qr.png" alt="Contact QR Code" data-lang-img='{"en": "./resources/qr-codes/contact-en-qr.png", "fr": "./resources/qr-codes/contact-fr-qr.png"}'>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LinkedIn -->
+            <h3 class="category-title">LinkedIn</h3>
+            <button class="link-btn" data-qr="linkedin">
+                <span>LinkedIn Profile</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="qr-container" id="linkedin">
+                <h3 class="qr-title">LinkedIn QR Code</h3>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="./resources/qr-codes/linkedin-qr.png" alt="LinkedIn QR Code">
+                    </div>
+                </div>
+            </div>
+
+            <!-- CV -->
+            <h3 class="category-title" data-i18n="cv">Curriculum Vitae</h3>
+            <button class="link-btn" data-qr="cv">
+                <span data-i18n="download_cv">Download CV</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="qr-container" id="cv">
+                <h3 class="qr-title" data-i18n="cv_qr">CV QR Code</h3>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="./resources/qr-codes/cv-en-qr.png" alt="CV QR Code" data-lang-img='{"en": "./resources/qr-codes/cv-en-qr.png", "fr": "./resources/qr-codes/cv-fr-qr.png"}'>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Details -->
+            <h3 class="category-title" data-i18n="contact_details">Contact Details</h3>
+            
+            <!-- Email -->
+            <div class="contact-details-item">
+                <div class="qr-code">
+                    <img src="./resources/qr-codes/email-qr.png" alt="Email QR Code">
+                </div>
+                <div class="contact-details-text">
+                    <p data-i18n="email">Email</p>
+                    <p class="text-value">noa.jelsch@viacesi.fr</p>
+                </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-details-item">
+                <div class="qr-code">
+                    <img src="./resources/qr-codes/phone-qr.png" alt="Phone QR Code">
+                </div>
+                <div class="contact-details-text">
+                    <p data-i18n="phone">Phone</p>
+                    <p class="text-value">+33 7 68 17 21 75</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Language configuration
+            const translations = {
+                en: {
+                    title: "My QR Codes",
+                    subtitle: "Scan to connect",
+                    contact: "Contact",
+                    add_contact: "Add to Contacts",
+                    contact_qr: "Contact QR Code",
+                    cv: "Curriculum Vitae",
+                    download_cv: "Download CV",
+                    cv_qr: "CV QR Code",
+                    contact_details: "Contact Details",
+                    email: "Email",
+                    phone: "Phone"
+                },
+                fr: {
+                    title: "Mes Codes QR",
+                    subtitle: "Scannez pour vous connecter",
+                    contact: "Contact",
+                    add_contact: "Ajouter aux contacts",
+                    contact_qr: "Code QR de contact",
+                    cv: "Curriculum Vitæ",
+                    download_cv: "Télécharger le CV",
+                    cv_qr: "Code QR du CV",
+                    contact_details: "Coordonnées",
+                    email: "Courriel",
+                    phone: "Téléphone"
+                }
+            };
+
+            // Language switching
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const lang = this.dataset.lang;
+                    document.documentElement.setAttribute('data-lang', lang);
+                    
+                    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    document.querySelectorAll('[data-i18n]').forEach(el => {
+                        const key = el.dataset.i18n;
+                        el.textContent = translations[lang][key];
+                    });
+                    
+                    document.querySelectorAll('[data-lang-img]').forEach(img => {
+                        const sources = JSON.parse(img.dataset.langImg);
+                        img.src = sources[lang];
+                    });
+                });
+            });
+
+            // QR toggle functionality
+            const linkButtons = document.querySelectorAll('.link-btn');
+            
+            linkButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const qrId = this.getAttribute('data-qr');
+                    const qrContainer = document.getElementById(qrId);
+                    const isActive = qrContainer.classList.contains('active');
+                    
+                    document.querySelectorAll('.qr-container').forEach(container => {
+                        container.classList.remove('active');
+                    });
+                    
+                    document.querySelectorAll('.link-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    
+                    if (!isActive) {
+                        qrContainer.classList.add('active');
+                        this.classList.add('active');
+                        qrContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
