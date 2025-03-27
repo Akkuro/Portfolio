@@ -18,3 +18,69 @@
     border-radius: 10px;
     margin: 0.7rem 0;
 }
+
+
+/*______
+RESIZING
+*/
+
+.sidebar .section-header {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-icon {
+    margin-right: 0.5rem;
+}
+
+.bullets>li::before {
+    margin-right: 0.35rem;
+}
+
+.sub-bullets>li::before {
+    margin-right: 0.35rem;
+}
+
+.main-content {
+    gap: 1.5rem;
+}
+
+.main-content .section-header {
+    margin-bottom: 0.4rem;
+}
+
+.main-content .sub-section-header {
+    margin-bottom: 0.4rem;
+}
+
+.sub-section {
+    margin-bottom: 1.5rem;
+}
+
+.company-experience {
+    margin-bottom: 1rem;
+}
+
+.company-title {
+    margin-bottom: 0.5rem;
+}
+
+.experience+.experience {
+    margin-top: 0.5em;
+}
+
+.experience {
+    padding-left: 0.5rem;
+}
+
+.additional-info {
+    margin-left: 1rem;
+}
+
+.exp-date {
+    margin-left: 0.5rem;
+}
+
+.skills .bullets {
+    margin-left: 0.1rem;
+}
