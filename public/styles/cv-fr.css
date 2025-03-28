@@ -1,7 +1,7 @@
 .name {
     text-align: center;
-    margin-top: 0.5rem;
-    font-size: 1.5rem;
+    margin-top: calc(0.5 * var(--content-font-size));
+    font-size: calc(1.5 * var(--content-font-size));
     font-family: var(--h1-font);
     letter-spacing: -0.5px;
 }
@@ -14,9 +14,9 @@
 .profile {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: calc(1 * var(--content-font-size));
     border-radius: 10px;
-    margin: 0.7rem 0;
+    margin: calc(0.7 * var(--content-font-size)) 0;
 }
 
 
@@ -25,44 +25,44 @@ RESIZING
 */
 
 .sidebar .section-header {
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
+    padding: calc(0.5 * var(--content-font-size));
+    margin-bottom: calc(0.5 * var(--content-font-size));
 }
 
 .contact-icon {
-    margin-right: 0.5rem;
+    margin-right: calc(0.5 * var(--content-font-size));
 }
 
 .bullets>li::before {
-    margin-right: 0.35rem;
+    margin-right: calc(0.35 * var(--content-font-size));
 }
 
 .sub-bullets>li::before {
-    margin-right: 0.35rem;
+    margin-right: calc(0.35 * var(--content-font-size));
 }
 
 .main-content {
-    gap: 1.5rem;
+    gap: calc(1.5 * var(--content-font-size));
 }
 
 .main-content .section-header {
-    margin-bottom: 0.4rem;
+    margin-bottom: calc(0.4 * var(--content-font-size));
 }
 
 .main-content .sub-section-header {
-    margin-bottom: 0.4rem;
+    margin-bottom: calc(0.4 * var(--content-font-size));
 }
 
 .sub-section {
-    margin-bottom: 1.5rem;
+    margin-bottom: calc(1.5 * var(--content-font-size));
 }
 
 .company-experience {
-    margin-bottom: 1rem;
+    margin-bottom: calc(1 * var(--content-font-size));
 }
 
 .company-title {
-    margin-bottom: 0.5rem;
+    margin-bottom: calc(0.5 * var(--content-font-size));
 }
 
 .experience+.experience {
@@ -70,17 +70,17 @@ RESIZING
 }
 
 .experience {
-    padding-left: 0.5rem;
+    padding-left: calc(0.5 * var(--content-font-size));
 }
 
 .additional-info {
-    margin-left: 1rem;
+    margin-left: calc(1 * var(--content-font-size));
 }
 
 .exp-date {
-    margin-left: 0.5rem;
+    margin-left: calc(0.5 * var(--content-font-size));
 }
 
 .skills .bullets {
-    margin-left: 0.1rem;
+    margin-left: calc(0.1 * var(--content-font-size));
 }
