@@ -351,5 +351,10 @@ MAIN CONTENT
 
     .sidebar {
         width: 30%;
+        height: unset;
+    }
+
+    .main-content {
+        height: unset;
     }
 }
