@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "noajelsch",
+    "public": "out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
