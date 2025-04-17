@@ -1,37 +1,31 @@
-// /src/app/components/LanguageSwitcher.tsx
-'use client';
-import { useTranslation } from 'react-i18next';
+"use client";
+
+import { useLanguageContext } from "../contexts/LanguageContext";
 
 export const LanguageSwitcher = () => {
-  const { i18n } = useTranslation();
-
-  const changeLanguage = (lng: 'en' | 'fr') => {
-    i18n.changeLanguage(lng);
-    localStorage.setItem('i18nextLng', lng);
-    document.documentElement.lang = lng;
-  };
+  const { language, setLanguage } = useLanguageContext();
 
   return (
-    <div className="absolute top-6 right-6 flex gap-2">
+    <div className="flex items-center gap-2 p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
       <button
-        onClick={() => changeLanguage('en')}
-        className={`px-4 py-2 rounded-full font-semibold transition ${
-          i18n.language.startsWith('en')
-            ? 'bg-indigo-500 text-white'
-            : 'bg-white text-indigo-500 border border-indigo-500'
+        onClick={() => setLanguage("en")}
+        className={`px-3 py-1 rounded-md transition-all ${
+          language === "en"
+            ? "bg-blue-500 text-white shadow-md"
+            : "bg-white dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600"
         }`}
       >
-        EN
+        English
       </button>
       <button
-        onClick={() => changeLanguage('fr')}
-        className={`px-4 py-2 rounded-full font-semibold transition ${
-          i18n.language === 'fr'
-            ? 'bg-indigo-500 text-white'
-            : 'bg-white text-indigo-500 border border-indigo-500'
+        onClick={() => setLanguage("fr")}
+        className={`px-3 py-1 rounded-md transition-all ${
+          language === "fr"
+            ? "bg-blue-500 text-white shadow-md"
+            : "bg-white dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600"
         }`}
       >
-        FR
+        Français
       </button>
     </div>
   );

@@ -1,5 +1,11 @@
-// /src/app/layout.tsx
-import LanguageInitializer from "./components/LanguageInitializer";
+import { LanguageProvider } from "./contexts/LanguageContext";
+import type { Metadata } from "next";
+import "./globals.css";
+import PreloadTranslations from "./components/PreloadTranslations";
+
+export const metadata: Metadata = {
+  title: "My App",
+};
 
 export default function RootLayout({
   children,
@@ -8,9 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <PreloadTranslations />
+      </head>
       <body>
-        <LanguageInitializer />
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );
