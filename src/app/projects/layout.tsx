@@ -13,7 +13,7 @@ export default function ProjectsLayout({
   return (
     <>
       <Navbar title={t.projects || "Projects"} />
-      <main className="p-8">{children}</main>
+      <main>{children}</main>
     </>
   );
 }

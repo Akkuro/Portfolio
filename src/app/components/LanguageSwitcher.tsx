@@ -6,12 +6,12 @@ export const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguageContext();
 
   return (
-    <div className="flex items-center gap-2 p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
+    <div className="flex items-center gap-2 rounded-lg">
       <button
         onClick={() => setLanguage("en")}
         className={`px-3 py-1 rounded-md transition-all ${
           language === "en"
-            ? "bg-blue-500 text-white shadow-md"
+            ? "bg-blue-500 text-white shadow-md font-medium"
             : "bg-white dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600"
         }`}
       >
@@ -21,7 +21,7 @@ export const LanguageSwitcher = () => {
         onClick={() => setLanguage("fr")}
         className={`px-3 py-1 rounded-md transition-all ${
           language === "fr"
-            ? "bg-blue-500 text-white shadow-md"
+            ? "bg-blue-500 text-white shadow-md font-medium"
             : "bg-white dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600"
         }`}
       >
