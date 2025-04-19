@@ -2,6 +2,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import type { Metadata } from "next";
 import "./globals.css";
 import PreloadTranslations from "./components/PreloadTranslations";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "My App",
@@ -14,9 +15,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          referrerPolicy="no-referrer"
+        />
         <PreloadTranslations />
-      </head>
+      </Head>
       <body>
         <LanguageProvider>{children}</LanguageProvider>
       </body>
