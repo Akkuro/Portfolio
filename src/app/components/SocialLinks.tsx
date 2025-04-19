@@ -3,7 +3,7 @@
 export const SocialLinks: React.FC = () => (
   <div className="flex gap-6 my-8 justify-center">
     <a
-      href=""
+      href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Email"
@@ -13,7 +13,7 @@ export const SocialLinks: React.FC = () => (
       <span className="hidden sm:inline">Email</span>
     </a>
     <a
-      href=""
+      href={process.env.NEXT_PUBLIC_GITHUB}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="GitHub"
@@ -23,7 +23,7 @@ export const SocialLinks: React.FC = () => (
       <span className="hidden sm:inline">GitHub</span>
     </a>
     <a
-      href=""
+      href={process.env.NEXT_PUBLIC_LINKEDIN}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="LinkedIn"

@@ -2,8 +2,15 @@
   "greeting": "Hello, I'm Noa Jelsch",
   "subtitle": "Creative Developer & Designer",
   "description": "Welcome to my portfolio. This site is under construction. Stay tuned for updates!",
-  "contact": "Contact Me",
+  "contactMe": "Contact Me",
+  "contact": "Contact",
+  "contactSentence": "Feel free to reach out via email or connect with me on GitHub and LinkedIn!",
   "switch": "Français",
   "viewProjects": "View Projects",
-  "projects": "My Projects"
+  "projects": "My Projects",
+  "phone": "Phone",
+  "email": "Email",
+  "location": "Location",
+  "willingToRelocate": "Willing to relocate",
+  "colon": ":"
 }
