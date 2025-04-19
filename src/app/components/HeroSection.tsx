@@ -1,12 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { useLanguageContext } from "../contexts/LanguageContext";
 
 export const HeroSection = () => {
   const { t } = useLanguageContext();
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-[60vh] bg-gradient-to-br from-slate-50 to-indigo-100 rounded-xl shadow-lg p-8 mt-8 mb-8">
+    <section className="flex flex-col items-center justify-center min-h-[60vh] bg-gradient-to-br from-slate-50 to-indigo-100 rounded-xl shadow-lg p-15 mt-8 mb-8">
       <h1 className="text-4xl md:text-5xl font-extrabold mb-3 text-slate-800 text-center">
         {t.greeting || "Hello, I'm Jon"}
       </h1>
@@ -18,12 +19,12 @@ export const HeroSection = () => {
       </p>
       <div className="flex gap-4">
         {t.viewProjects && (
-          <a
-            href="#projects"
+          <Link
+            href="/projects"
             className="px-8 py-3 bg-indigo-500 text-white rounded-full font-semibold text-base shadow hover:bg-indigo-600 transition"
           >
             {t.viewProjects}
-          </a>
+          </Link>
         )}
         {t.contact && (
           <a
