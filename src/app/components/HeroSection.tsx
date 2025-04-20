@@ -21,7 +21,7 @@ export const HeroSection = () => {
         {t.viewProjects && (
           <Link
             href="/projects"
-            className="px-8 py-3 bg-indigo-500 text-white rounded-full font-semibold text-base shadow hover:bg-indigo-600 transition"
+            className="flex items-center justify-center px-8 py-3 bg-indigo-500 text-white rounded-full font-semibold text-center shadow hover:bg-indigo-600 transition"
           >
             {t.viewProjects}
           </Link>
@@ -29,7 +29,7 @@ export const HeroSection = () => {
         {t.contact && (
           <a
             href="/contact"
-            className="px-8 py-3 bg-white text-indigo-500 border-2 border-indigo-500 rounded-full font-semibold text-base shadow hover:bg-indigo-50 transition"
+            className="flex items-center justify-center px-8 py-3 bg-white text-indigo-500 border-2 border-indigo-500 rounded-full font-semibold text-center shadow hover:bg-indigo-50 transition"
           >
             {t.contact}
           </a>
