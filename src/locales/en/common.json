@@ -12,5 +12,12 @@
   "email": "Email",
   "location": "Location",
   "willingToRelocate": "Willing to relocate",
-  "colon": ":"
+  "colon": ":",
+  "downloadCv": "Download my CV (PDF)",
+  "preparing": "Preparing",
+  "downloadFailed": "Download Failed",
+  "cvDlError": "Unable to download the CV",
+  "noLocalizedCv": "Localized CV Not Available",
+  "enVerCvFallback": "Showing English version instead",
+  "underConstruction": "🚧 This section is under construction and will be available soon 🚧"
 }
