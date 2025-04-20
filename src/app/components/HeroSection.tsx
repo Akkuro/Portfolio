@@ -27,12 +27,12 @@ export const HeroSection = () => {
           </Link>
         )}
         {t.contact && (
-          <a
+          <Link
             href="/contact"
             className="flex items-center justify-center px-8 py-3 bg-white text-indigo-500 border-2 border-indigo-500 rounded-full font-semibold text-center shadow hover:bg-indigo-50 transition"
           >
             {t.contact}
-          </a>
+          </Link>
         )}
       </div>
     </section>
