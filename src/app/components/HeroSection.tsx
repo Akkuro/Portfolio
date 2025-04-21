@@ -7,7 +7,15 @@ export const HeroSection = () => {
   const { t } = useLanguageContext();
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-[60vh] bg-gradient-to-br from-slate-50 to-indigo-100 rounded-xl shadow-lg p-15 mt-8 mb-8">
+    <section className="flex flex-col items-center justify-center min-h-[60vh] bg-gradient-to-br from-slate-50 to-indigo-100 rounded-xl shadow-lg p-8 md:p-15 mt-8 mb-8">
+      <div className="relative w-36 h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-xl mb-8">
+        <img
+          src="/profile-photo.jpg"
+          alt={`${process.env.NEXT_PUBLIC_FULL_NAME || "Professional"}`}
+          className="object-cover"
+        />
+      </div>
+
       <h1 className="text-4xl md:text-5xl font-extrabold mb-3 text-slate-800 text-center">
         {t.greeting || `Hello, I'm ${process.env.NEXT_PUBLIC_FULL_NAME}`}
       </h1>
