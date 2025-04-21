@@ -38,29 +38,13 @@ export const CvDownloadButton: React.FC<DownloadCVProps> = ({
     setIsDownloading(true);
     setError(null);
 
-    const preferredUrl = `/cv/${language}/cv.pdf`;
-    const fallbackUrl = "/cv/en/cv.pdf";
+    const cvUrl = `/cv/${language}/cv.pdf`;
     const fileName = `${process.env.NEXT_PUBLIC_NAME}-${process.env.NEXT_PUBLIC_LAST_NAME}-CV.pdf`;
 
     try {
-      const response = await fetch(preferredUrl);
-
+      const response = await fetch(cvUrl);
       if (response.ok) {
         await triggerDownload(response, fileName);
-        return;
-      }
-
-      const fallbackResponse = await fetch(fallbackUrl);
-      if (fallbackResponse.ok) {
-        await triggerDownload(fallbackResponse, fileName);
-
-        setError({
-          title: t.noLocalizedCv,
-          message: t.enVerCvFallback,
-          severity: "warning",
-        });
-      } else {
-        throw new Error("No CV available in any language");
       }
     } catch (err) {
       setError({
