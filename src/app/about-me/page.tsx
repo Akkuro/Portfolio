@@ -10,7 +10,16 @@ export default function ProjectsPage() {
       <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-slate-800 text-center">
         {t.aboutMe}
       </h1>
-      <div className="bg-white rounded-lg shadow-md p-8 flex flex-col items-center"></div>
+      <div className="bg-white rounded-lg shadow-md p-8 flex flex-col items-center w-full max-w-2xl">
+        {typeof t.aboutMeContents === "string"
+          ? t.aboutMeContents.split("\n").map((line, idx) => (
+              <span key={idx}>
+                {line}
+                <br />
+              </span>
+            ))
+          : t.aboutMeContents}
+      </div>
     </div>
   );
 }
