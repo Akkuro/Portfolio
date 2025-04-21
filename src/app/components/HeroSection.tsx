@@ -8,14 +8,26 @@ export const HeroSection = () => {
 
   return (
     <section className="flex flex-col items-center justify-center min-h-[60vh] bg-gradient-to-br from-slate-50 to-indigo-100 rounded-xl shadow-lg p-8 md:p-15 mt-8 mb-8">
-      <div className="relative w-36 h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-xl mb-8">
-        <img
-          src="/profile-photo.jpg"
-          alt={`${process.env.NEXT_PUBLIC_FULL_NAME || "Professional"}`}
-          className="object-cover"
-        />
-      </div>
-
+      <Link
+        href="/about-me"
+        className="group relative w-36 h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-xl mb-8 hover:scale-105 transition-transform duration-300"
+      >
+        <div className="relative w-full h-full">
+          <img
+            src="/profile-photo.jpg"
+            alt={`${process.env.NEXT_PUBLIC_FULL_NAME || "Professional"}`}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        {/* About Me overlay on hover */}
+        <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-full">
+          <div className="absolute bottom-0 left-0 right-0 h-0 bg-indigo-500 group-hover:h-full transition-all duration-250 ease-linear">
+            <span className="text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-semibold text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 delay-50">
+              {t.aboutMe || "About Me"}
+            </span>
+          </div>
+        </div>
+      </Link>
       <h1 className="text-4xl md:text-5xl font-extrabold mb-3 text-slate-800 text-center">
         {t.greeting || `Hello, I'm ${process.env.NEXT_PUBLIC_FULL_NAME}`}
       </h1>
