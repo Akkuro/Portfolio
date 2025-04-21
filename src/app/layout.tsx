@@ -5,7 +5,7 @@ import PreloadTranslations from "./components/PreloadTranslations";
 import Head from "next/head";
 
 export const metadata: Metadata = {
-  title: "My App",
+  title: "Noa Jelsch⚡",
 };
 
 export default function RootLayout({
