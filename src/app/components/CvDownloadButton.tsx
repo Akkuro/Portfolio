@@ -73,9 +73,9 @@ export const CvDownloadButton: React.FC<DownloadCVProps> = ({
         aria-busy={isDownloading}
       >
         {isDownloading ? (
-          <>
+          <div className="flex">
             <svg
-              className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
+              className="animate-spin -ml-1 mr-2 h-4 w-4 text-white self-center"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -95,7 +95,7 @@ export const CvDownloadButton: React.FC<DownloadCVProps> = ({
               ></path>
             </svg>
             {t.preparing + "..."}
-          </>
+          </div>
         ) : (
           t.downloadCv
         )}
