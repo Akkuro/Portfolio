@@ -12,7 +12,7 @@ export const LanguageSwitcher = () => {
         className={`px-3 py-1 rounded-md transition-all ${
           language === "en"
             ? "bg-blue-500 text-white shadow-md font-medium"
-            : "bg-white dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600"
+            : "bg-white hover:bg-gray-200"
         }`}
       >
         English
@@ -22,7 +22,7 @@ export const LanguageSwitcher = () => {
         className={`px-3 py-1 rounded-md transition-all ${
           language === "fr"
             ? "bg-blue-500 text-white shadow-md font-medium"
-            : "bg-white dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600"
+            : "bg-white hover:bg-gray-200"
         }`}
       >
         Français
