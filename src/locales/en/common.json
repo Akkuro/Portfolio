@@ -20,5 +20,6 @@
   "noLocalizedCv": "Localized CV Not Available",
   "enVerCvFallback": "Showing English version instead",
   "underConstruction": "🚧 This section is under construction and will be available soon 🚧",
-  "aboutMe": "About Me"
+  "aboutMe": "About Me",
+  "tapForProfile": "Tap for Bio"
 }

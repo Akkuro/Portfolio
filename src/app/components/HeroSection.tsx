@@ -26,6 +26,10 @@ export const HeroSection = () => {
               {t.aboutMe || "About Me"}
             </span>
           </div>
+          {/* Mobile indicator */}
+          <span className="md:hidden absolute bottom-2 left-1/2 -translate-x-1/2 bg-black/30 text-white text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap">
+            {t.tapForProfile || "Tap for Bio"}
+          </span>
         </div>
       </Link>
       <h1 className="text-4xl md:text-5xl font-extrabold mb-3 text-slate-800 text-center">

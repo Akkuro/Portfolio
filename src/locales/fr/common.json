@@ -20,5 +20,6 @@
   "noLocalizedCv": "Pas de CV disponible dans cette langue",
   "enVerCvFallback": "Affichage de la version anglaise à la place",
   "underConstruction": "🚧 Cette section est en cours de construction et sera bientôt disponible 🚧",
-  "aboutMe": "À propos de moi"
+  "aboutMe": "À propos de moi",
+  "tapForProfile": "Voir Profil"
 }
