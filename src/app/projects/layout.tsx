@@ -25,9 +25,11 @@ export default function ProjectsLayout({
   }, [language]);
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-slate-50 to-indigo-100">
       <Navbar title={t.projects || "My Projects"} />
-      <main>{children}</main>
-    </>
+      <main className="flex-1 flex flex-col items-center justify-center">
+        {children}
+      </main>
+    </div>
   );
 }
